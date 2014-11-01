@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="dragModule">
+<head>
+	<meta charset="UTF-8">
+	<title>{{w}}</title>
+	<style>
+		*{
+			padding: 0px;
+			margin: 0px;
+		}
+		.slide{
+			width: 500px;
+			height: 18px;
+			background: #ccc;
+			margin-left:auto;
+			margin-right:auto;
+			margin-top: 100px;
+			position: relative;
+		}
+		span{
+
+			display: inline-block;
+			vertical-align: top;
+		}
+		#clicked{
+			
+			width: 5px;
+			height: 30px;
+			background: red;
+			position: absolute;
+	       	border: 1px solid red;
+	       	cursor: pointer;
+	       	top:'-5px'
+		}
+		#green{
+			position: absolute;
+			height: 18px;
+			background: green;
+		}
+		input{
+			margin-left: 500px;
+			margin-top: 50px;
+		}
+	</style>
+	
+</head>
+<body ng-controller='dragController'>
+	
+	<div class="slide" >
+		<span id='green' style="width:{{w}}px"></span>
+		<span style="top:-5px;left:{{w}}px" my-draggable id="clicked" ></span>
+	</div>
+	<input type="text"  ng-model="w" maxlength="3">
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+
+</body>
+</html>
