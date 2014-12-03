@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title> 盛大云计算</title>
+    <meta name="keywords" content="盛大云计算,云计算 " />
+    
+	<meta name="description" content=' "盛大云"（www.grandcloud.cn）是在整合盛大集团资源的基础上，百分百自主技术研发而成的公有云平台。"盛大云"以国际领先的AWS模式，已推出国内第一家按需计费的云主机，第一家基于Key-Value的云存储，第一家云硬盘服务，第一家一站式服务的DDS产品，第一家在线MongoIC服务以及云监控服务' />
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="css/calculator2.css">
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/slide.js"></script>
+    <script type="text/javascript" src="js/avalon.js"></script>
+    <script type="text/javascript" src="js/calculator/data.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/calculator/dds.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('.slideControl').slideControl({
+                speed: 0,
+                lowerBound: 0,
+                upperBound: 10,
+                total:10000
+            });
+        })
+    </script>
+</head>
+<body >
+	<div class="content main">
+		<div class="main">
+			<div class="sidebar fl" onselectstart="return false">
+				<div class="title">产品计算器</div>
+                <ul class="out-bar" >
+                    <li data-role="c2"><a href="cal.html"  target="_blank">云主机</a>
+                    </li>
+                    <li data-role="mix"><a href="mix.html" target="_blank">专享云</a>
+                    </li>
+                    <li data-role="ecs"><a href="ecs.html" target="_blank">云存储</a>
+                    </li>
+                    <li data-role="ebs"><a href="ebs.html" target="_blank">云硬盘</a>
+                    </li>
+                    <li data-role="dds"><a href="dds.html" class="color" target="_blank">云分发</a>
+                    </li>
+                    <li data-role="cds"><a href="cds.html" target="_blank">数据库云</a>
+                    </li>
+                </ul>
+			</div>
+			<div id="message" ms-controller="cal">
+               <div class="cal_header">
+               		<strong>云分发价格计算器</strong><br/>
+               		<span>CLOUD HOSTING PRICE CALCULATOR</span>
+               		<ul>
+                        <li ms-click="change_status(0)" ms-class="current_tab:status==0">页面加速</li>
+                        <li ms-click="change_status(1)" ms-class="current_tab:status==1">下载加速节点</li>
+               		</ul>
+
+               </div>
+               <div class="cal_body">
+
+               		<div class="tips" style="border:none" ms-controller="flow">
+                        <p>流量加速使用计算:</p>
+	               		<div id="ff">
+                            <ul>
+
+                                <li>
+                                    <span class="slideControlContainer">
+                                        <span class="slideControlFill" ms-css-width="{{parseInt(num/10240*100)}}%">
+                                            <span class="slideControlHandle"></span>
+                                        </span>
+                                    </span>
+                                    <input type="text" class="slideControl slideControlInput" ms-duplex="num">
+                                    <strong>GB</strong>
+                                </li>
+                            </ul>
+	               		</div>
+	               		<ol style="margin-top:-18px;">
+	               			<li><em>{{price_flow | number(2)}}</em>&nbsp元</li>
+	               		</ol>
+                        <div class="clear"></div>
+               		</div>
+               		
+               		<div class="clear"></div>
+               		
+               </div>
+               <div class="cal_footer">
+               		<ul>
+               			<li>总价：<em>{{total_price | number(2)}}</em>元/月</li>
+               			<li><a href="" target="_blank" id="buy">立即购买</a></li>
+               		</ul>
+
+               </div>
+            </div>
+
+			<div class="clear"></div>
+		</div>
+		
+	</div>
+
+	
+</body>
+</html>

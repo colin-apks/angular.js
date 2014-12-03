@@ -1,0 +1,292 @@
+/* 
+	头部、尾部css样式
+*/
+*{
+	padding: 0px;
+	margin: 0px;
+}
+.hide{
+	display: none;
+}
+input{
+	outline: none;
+}
+.sidebar ul li .color{
+	background: #4482D5;
+}
+li{
+	list-style: none;
+}
+img{
+	border: none;
+}
+a{
+	text-decoration: none;
+	outline: none;
+}
+body{
+	overflow-x:hidden;
+	font-family:'Microsoft Yahei','Tahoma','Open Sans','Helvetica Neue','Arial','Hiragino Sans GB','WenQuanYi Micro Hei';;
+}
+.main{
+	width: 1196px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.clear{
+	clear: both;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right !important;
+}
+.fr10{
+	margin-right: 10px;
+}
+.fr47{
+	margin-right: 47px;
+}
+.fl27{
+	margin-left: 27px;
+}
+.mt18{
+	margin-top: 18px !important;
+}
+.top{
+	max-width: 1905px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 26px;
+	background: #2c2c2c;
+	text-align: center;
+}
+.fr0{
+	margin-right: 0px !important;
+}
+.fl0{
+	margin-left: 0px !important;
+}
+.top i{
+	display: inline-block;
+	width: 28px;
+	height: 23px;
+	margin-top: 2px;
+	background: url('../images/sprite.png') 0px -18px no-repeat;
+}
+.top ul,.top li{
+	
+	float: right;
+}
+.top li{
+	margin-left: 27px;
+}
+.top span{
+	margin-top: 6px; 
+}
+.top a,span{
+	color:#fff;
+	font-size: 12px;
+}
+.top a:hover{
+	color:#4482D5;
+	cursor: pointer;
+}
+.header{
+	max-width: 1905px;
+	height: 70px;
+	margin-left: auto;
+	margin-right: auto;
+	
+	
+	text-align: center;
+}
+.header i{
+	display: inline-block;
+	width: 172px;
+	height: 48px;
+	margin-top: 11px;
+	background: url('../images/sprite.png') 0px -155px no-repeat;
+}
+.header .main>ul{
+	float: right;
+	margin-right: -25px;
+}
+.header .main>ul>li{
+	float: left;
+	height: 70px;
+	width:7em;
+	line-height: 70px;
+	font-size: 16px;
+	color: #7A7A7A;
+	
+}
+.header .main>ul>li>a{
+    display: inline-block;
+    height: 70px;
+    width:7em;
+	color: white;
+}
+
+.header .main>ul>li ul{
+	
+	position: relative;
+	z-index: 222;
+	width: 200px;
+	height: auto;
+	display: none;
+	-webkit-box-shadow:0px 0px 5px rgba(0,0,0,.2);
+    -moz-box-shadow:0px 0px 5px rgba(0,0,0,.2);
+    box-shadow:0px 0px 5px rgba(0,0,0,.2);
+
+}
+.header .main>ul>li li{
+	height: 40px;
+	line-height: 40px;
+	text-align: left;
+	padding-left: 30px;
+	padding-right: 30px;
+	background: white;
+
+}
+
+.header .main>ul>li li a{
+	display: block;
+	font-size: 14px;
+	color: #7A7A7A;
+}
+
+.header .main .active{
+	background: url('../images/bg2.jpg') repeat-x;
+	color: white;
+	cursor: pointer;
+}
+
+.footer{
+	max-width: 1905px;
+	height: 315px;
+	
+	margin-left: auto;
+	margin-right: auto;
+}
+.footer .message{
+	width: 100%;
+	height: 245px;
+	padding-top: 30px;
+	background: #1f1f1f;
+}
+.footer .copyright{
+	width: 100%;
+	height: 70px;
+	background: #0e0e0e;
+
+}
+.footer .message dl{
+	float: left;
+	margin-right: 115px;
+}
+.footer .message dt{
+	color: #666666;
+	font-size: 16px;
+}
+.footer .message dd a,.footer .message dd {
+	color: #666666;
+	font-size: 12px;
+}
+.footer .message dd a:hover{
+	color:#ffffff;
+}
+.footer .message dt,.footer .message dd{
+	margin-bottom: 8px;
+}
+.footer .message i{
+	display: inline-block;
+	width: 23px;
+	height: 23px;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+.footer .message .phone{
+	background: url('../images/sprite.png') -5px -18px no-repeat;	
+}
+.footer .message .weibo{
+	background: url('../images/sprite.png') -30px -18px no-repeat;	
+}
+.footer .message .email{
+	background: url('../images/sprite.png') -54px -15px no-repeat;
+}
+.footer .copyright p{
+	color:#605f5f;
+	font-size: 12px;
+	padding-top: 20px;
+	float: left;
+}
+.footer .copyright a{
+	float: right;
+	margin-top: 8px;
+}
+
+
+.sidebar{
+	width: 228px;
+	border:1px solid #ccc;
+}
+.sidebar .title{
+	height: 46px;
+	width: 213px;
+	background: url('../images/bg0.jpg') repeat-x;
+	line-height: 46px;
+	color: white;
+	padding-left: 15px;
+}
+
+.sidebar>ul>li span{
+	display: block;
+	color: #333;
+	height: 37px;
+	font-size: 12px;
+	background: white;
+	line-height: 37px;
+	border-bottom: 1px solid #ccc;
+	padding-left: 30px;
+}
+.sidebar i{
+	float: right;
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+	background: url('../images/up.jpg');
+	float: right;
+	margin-top: 10px;
+	margin-right: 15px;
+	transition: transform 0.2s ease-out;
+	-moz-transition: transform 0.2s ease-out;	/* Firefox 4 */
+	-webkit-transition: transform 0.2s ease-out;	/* Safari 和 Chrome */
+	-o-transition: transform 0.2s ease-out;
+}
+
+.sidebar>ul .inner-bar{
+	
+	background: #f2f2f2;
+	overflow: hidden;
+	display: none;
+
+	
+}
+.inner-bar li{
+	height: 37px;
+	line-height: 37px;
+	border-bottom: 1px solid #ccc;
+	font-size: 12px;
+	
+	
+	
+}
+.inner-bar li a{
+	color: #333;
+	padding-left: 30px;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}

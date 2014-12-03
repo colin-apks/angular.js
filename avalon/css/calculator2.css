@@ -1,0 +1,412 @@
+.slideControlContainer,.slideControlContainer1,.slideControlContainer2,.slideControlContainer3 {
+	height:10px; 
+	background: #efefef; /* Old browsers */
+	background: -moz-linear-gradient(top, #efefef 0%, #ffffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #efefef 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #efefef 0%,#ffffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #efefef 0%,#ffffff 100%); /* IE10+ */
+	border:1px solid #ccc; box-shadow:inset 0 1px 0 #fff;
+	border-radius:7px;
+	cursor:pointer;
+	width:340px;
+	float:left;
+	margin:15px 10px 0 0;
+}
+	
+.slideControlFill,.slideControlFill1,.slideControlFill2,.slideControlFill3 {
+	background: #ea5507; /* Old browsers */
+	background: -moz-linear-gradient(top, #feccb1 0%, #f17432 50%, #ea5507 51%, #fb955e 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#feccb1), color-stop(50%,#f17432), color-stop(51%,#ea5507), color-stop(100%,#fb955e)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #feccb1 0%,#f17432 50%,#ea5507 51%,#fb955e 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #feccb1 0%,#f17432 50%,#ea5507 51%,#fb955e 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #feccb1 0%,#f17432 50%,#ea5507 51%,#fb955e 100%); /* IE10+ */
+	display:block;
+	height:100%;
+	border-radius:7px;
+	box-shadow:inset 0 1px 0 #F9D7C5;
+	position:relative;
+	z-index:1;
+	overflow:visible !important;
+}
+	
+.slideControlHandle,.slideControlHandle1,.slideControlHandle2,.slideControlHandle3 {
+	display:block; 
+	background: #ea5507; /* Old browsers */
+	background: -moz-linear-gradient(top, #feccb1 0%, #f17432 50%, #ea5507 51%, #fb955e 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#feccb1), color-stop(50%,#f17432), color-stop(51%,#ea5507), color-stop(100%,#fb955e)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #feccb1 0%,#f17432 50%,#ea5507 51%,#fb955e 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #feccb1 0%,#f17432 50%,#ea5507 51%,#fb955e 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #feccb1 0%,#f17432 50%,#ea5507 51%,#fb955e 100%); /* IE10+ */
+	border-radius:15px;
+	border:5px solid #fff;
+	width:10px;
+	height:10px;
+	box-shadow:0 0 1px #555;
+	position:absolute;
+	right:0;
+	top:-5px;
+	z-index:5;
+	cursor:pointer;
+}
+
+.ieShadow {
+	zoom: 1;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color=#aaaaaa,direction=0,strength=1), 
+  progid:DXImageTransform.Microsoft.Shadow(color=#aaaaaa,direction=45,strength=1), 
+  progid:DXImageTransform.Microsoft.Shadow(color=#aaaaaa,direction=90,strength=1), 
+  progid:DXImageTransform.Microsoft.Shadow(color=#aaaaaa,direction=135,strength=1), 
+  progid:DXImageTransform.Microsoft.Shadow(color=#aaaaaa,direction=180,strength=1), 
+  progid:DXImageTransform.Microsoft.Shadow(color=#aaaaaa,direction=225,strength=1), 
+  progid:DXImageTransform.Microsoft.Shadow(color=#aaaaaa,direction=270,strength=1), 
+  progid:DXImageTransform.Microsoft.Shadow(color=#aaaaaa,direction=315,strength=1);
+	top:-8px;
+	right:-4px;
+}
+	
+.slideControlInput ,.slideControlInput1,.slideControlInput2,.slideControlInput3 {
+	width:35px;
+	font-size:1.5em;
+	padding:3px 5px;
+	border:1px solid #ccc;
+	border-radius:5px;
+	text-align:center;
+	color:#333;
+	font-weight:bold;
+}
+
+/* ........................................................ */
+.sidebar>ul>li a {
+    display: block;
+    color: #333;
+    height: 37px;
+    font-size: 12px;
+    background: white;
+    line-height: 37px;
+    border-bottom: 1px solid #ccc;
+    padding-left: 30px;
+}
+#message{
+	width: 944px;
+	float: right;
+	background: white;
+	
+}
+
+.content{
+	width: 100%;
+	background: #E9EAEC;
+	padding-top: 48px;
+	padding-bottom: 73px;
+}
+span{
+	color: #777777;
+}
+.cal_header{
+	width: 822px;
+	height: 149px;
+	border: 1px solid #ccc;
+
+	padding-left: 70px;
+	padding-right: 50px;
+	padding-top: 46px;
+}
+.cal_header strong,.cal_header span{
+	font-size: 24px;
+}
+.cal_header span{
+	display: inline-block;
+	font-family: Arial;
+	margin-top: 5px;
+}
+.cal_header .current_tab{
+	border-top: 3px solid #389fe6;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid white;
+	background: #f9f9f9;
+}
+
+.cal_header li{
+	float: left;
+	width: auto;
+	height: 37px;
+	margin-top: 46px;
+	line-height: 37px;
+	text-align: center;
+	padding: 0px 15px;
+    cursor: pointer;
+}
+
+.cal_body ul li{
+	float: left;
+	width: auto;
+	padding: 0px 8px;
+	height: 37px;
+	line-height: 37px;
+	text-align: center;
+	margin-right: 4px;
+	border-radius: 5px;
+	font-size: 12px;
+	background: #E7E7E7;
+    cursor: pointer;
+}
+.cal_body .tips ol li{
+	text-align: right;
+	color: #666;
+	font-size: 12px;
+}
+.cal_body .tips ol li em{
+	color: black;
+	font-style: normal;
+	font-size: 30px;
+}
+#model li{
+	padding: 0px 15px;
+}
+#cpu li{
+
+	margin-bottom: 15px;
+}
+#bandwidth li{
+	width: 60px;
+}
+.cal_footer ul li{
+	text-align: right;
+	color: #666666;
+}
+.cal_footer li em{
+	color: #f30000;
+	font-style:normal;
+	font-size: 30px;
+}
+.cal_footer #buy{
+    display: inline-block;
+	width: 142px;
+	height: 52px;
+    line-height: 52px;
+    text-align: center;
+	background: #48A0F9;
+	color: white;
+	border-radius: 10px;
+	font-size: 20px;
+	margin-top: 20px;
+    outline: none;
+}
+/*#os li:first-child, #model li:first-child, #cpu li:first-child, #thread li:first-child, #bandwidth li:first-child{
+    color: white;
+    background: #389FE6;
+}*/
+#disk li{
+    height: 30px;
+    background: #f9f9f9;
+}
+.cal_body{
+	width: 824px;
+	padding-left: 70px;
+	padding-right: 50px;
+	padding-top: 35px;
+	margin-top: 1px;
+	background: #f9f9f9;
+}
+.cal_body .current{
+	
+	color: white;
+	background: #389FE6;
+}
+
+.cal_body .tips ol{
+	float: right;
+	margin-top: -95px;
+}
+
+.cal_body .tips>div{
+	clear: both;
+	padding-bottom: 15px;
+}
+.tips{
+	border-bottom: 1px solid #ccc !important;
+	margin-top: 30px;
+	padding-bottom: 46px;
+}
+
+.cal_body  p{
+	font-size: 18px;
+	font-weight: bold;
+	color: #000;
+	margin-bottom: 25px;
+}
+.cal_body .tips>div span{
+	font-size: 14px;
+	display: inline-block;
+	width: 100px;
+	text-align: right;
+	height: 37px;
+	line-height: 37px;
+	margin-right: 25px;
+}
+
+#slide{
+	position: relative;
+	width: 400px;
+	height: 10px;
+	border-radius: 5px;
+	border: 1px solid #398fe6;
+	float: left;
+	margin-top: 13px;
+}
+#bar{
+	position: absolute;
+	height: 20px;
+	width: 6px;
+	left: 20px;
+	top: -5px;
+	background: #388ee5;
+	border-radius:3px; 
+	-webkit-border-radius:3px; 
+	-moz-border-radius:3px; 
+}
+#green{
+	background: #389FE6;
+	height: 10px;
+	position: absolute;
+	top: 0px;
+}
+hr{
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+input[type='text']{
+	width: 70px;
+	height: 30px;
+	margin-left: 10px;
+}
+#bar i{
+	font-style: normal;
+}
+.cal_footer{
+	height: 213px;
+	background: white;
+	border: 1px solid #ccc;
+
+	width: 822px;
+	padding-left: 70px;
+	padding-right: 50px;
+}
+.cal_footer ul{
+	float: right;
+	margin-top: 30px;
+}
+
+#disk i{
+	font-style: normal;
+	line-height: 30px;
+	margin-left: 5px;
+}
+.cal_body .tips .slideControlContainer,.cal_body .tips .slideControlContainer1,.cal_body .tips .slideControlContainer2,.cal_body .tips .slideControlContainer3 {
+    height: 10px;
+    background: #efefef;
+    background: -moz-linear-gradient(top, #efefef 0%, #ffffff 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(100%,#ffffff));
+    background: -webkit-linear-gradient(top, #efefef 0%,#ffffff 100%);
+    background: -o-linear-gradient(top, #efefef 0%,#ffffff 100%);
+    background: -ms-linear-gradient(top, #efefef 0%,#ffffff 100%);
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 0 #fff;
+    border-radius: 7px;
+    cursor: pointer;
+    width: 340px;
+    float: left;
+
+    margin-left: 23px;
+}
+.cal_body  .slideControlContainer .slideControlHandle,
+.cal_body  .slideControlContainer1 .slideControlHandle1,
+.cal_body  .slideControlContainer2 .slideControlHandle2,
+.cal_body  .slideControlContainer3 .slideControlHandle3{
+    display: block;
+    background: #ea5507;
+
+    background: #389FE6;
+    border-radius: 15px;
+    border: 5px solid #fff;
+    width: 10px;
+    height: 10px;
+    box-shadow: 0 0 1px #555;
+    position: absolute;
+    right: 0;
+    top: -5px;
+    z-index: 5;
+    cursor: pointer;
+    margin-right: 0px;
+}
+.cal_body  .slideControlContainer .slideControlFill,
+.cal_body  .slideControlContainer1 .slideControlFill1,
+.cal_body  .slideControlContainer2 .slideControlFill2,
+.cal_body  .slideControlContainer3 .slideControlFill3{
+    background: #ea5507;
+
+    background: #389FE6;
+    display: block;
+    height: 100%;
+    border-radius: 7px;
+    box-shadow: inset 0 1px 0 #F9D7C5;
+    position: relative;
+    z-index: 1;
+    overflow: visible !important;
+}
+.cal_body   .slideControlInput {
+    font-size: 1.5em;
+    padding: 3px 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    float: left;
+}
+.cal_body  .tips .slideControlContainer input[type='text'],
+.cal_body  .tips .slideControlContainer1 input[type='text'],
+.cal_body  .tips .slideControlContainer2 input[type='text'],
+.cal_body  .tips .slideControlContainer3 input[type='text']{
+
+    width: 35px;
+}
+
+label{
+    float: left;
+}
+
+#disk .slideControlFill{
+    width: auto;
+}
+strong{
+    font-size: 24px;
+    font-weight: normal;
+    font-family: Microsoft Yahei;
+    margin-left: 15px;
+}
+#ff li{
+    height: 30px;
+    background: #f9f9f9;
+}
+#sjk li,.sjk li{
+    margin-left: 0px;
+    height: 30px;
+    background: #f9f9f9;
+}
+
+.cal_body .tips .slideControlContainer,
+.cal_body .tips .slideControlContainer1,
+.cal_body .tips .slideControlContainer2,
+.cal_body .tips .slideControlContainer3{
+    margin-left: 0px;
+}
+.cal_body .tips ul{
+    float: left;
+    width: 630px;
+    height: auto;
+}
+#disk ul{
+    width: 630px;
+}

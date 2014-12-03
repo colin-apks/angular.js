@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title> 盛大云计算</title>
+    <meta name="keywords" content="盛大云计算,云计算 " />
+    
+	<meta name="description" content=' "盛大云"（www.grandcloud.cn）是在整合盛大集团资源的基础上，百分百自主技术研发而成的公有云平台。"盛大云"以国际领先的AWS模式，已推出国内第一家按需计费的云主机，第一家基于Key-Value的云存储，第一家云硬盘服务，第一家一站式服务的DDS产品，第一家在线MongoIC服务以及云监控服务' />
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="css/calculator2.css">
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/slide.js"></script>
+    <script type="text/javascript" src="js/avalon.js"></script>
+    <script type="text/javascript" src="js/calculator/data.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/calculator/cal.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('.slideControl').slideControl({
+                speed: 0,
+                lowerBound: 0,
+                upperBound: 10,
+                total:10240
+            });
+        })
+    </script>
+</head>
+<body >
+	<div class="content main">
+		<div class="main">
+			<div class="sidebar fl" onselectstart="return false">
+				<div class="title">产品计算器</div>
+				<ul class="out-bar" >
+					<li data-role="c2"><a href="cal.html" class="color" target="_blank">云主机</a>
+					</li>
+                    <li data-role="mix"><a href="mix.html" target="_blank">专享云</a>
+                    </li>
+                    <li data-role="ecs"><a href="ecs.html" target="_blank">云存储</a>
+                    </li>
+					<li data-role="ebs"><a href="ebs.html" target="_blank">云硬盘</a>
+					</li>
+                    <li data-role="dds"><a href="dds.html" target="_blank">云分发</a>
+					</li>
+                    <li data-role="cds"><a href="cds.html" target="_blank">数据库云</a>
+                    </li>
+				</ul>
+			</div>
+			<div id="message" ms-controller="cal">
+               <div class="cal_header">
+               		<strong>云主机价格计算器</strong><br/>
+               		<span>CLOUD HOSTING PRICE CALCULATOR</span>
+               		<ul>
+               			<li ms-click="change_status(0)" ms-class="current_tab:status==0">华东节点</li>
+               			<li ms-click="change_status(1)" ms-class="current_tab:status==1">华北节点</li>
+               		</ul>
+
+               </div>
+               <div class="cal_body">
+               		<div class="tips" ms-controller="os">
+               			<p>主机配置</p>
+	               		<div id="os">
+	               			<span class="fl">操作系统:</span>
+	               			<ul>
+								<li ms-repeat="data_os" ms-click="change_status($index)" ms-class="current:status_os==$index">{{el}}</li>
+	               			</ul>
+	               			<div class="clear"></div>
+	               		</div>
+	               		<div id="model">
+	               			<span class="fl">机型:</span>
+	               			<ul>
+								<li ms-repeat="data_model" ms-click="change_model($key)" ms-class="current:status_model==$key">
+									{{$key}}
+								</li>
+	               			</ul>
+	               			<div class="clear"></div>
+	               		</div>
+	               		<div id="cpu">
+	               			<span class="fl">CPU/内存/磁盘:</span>
+	               			<ul>
+	               				<li ms-repeat="data_model" ms-click="change_model($key)" ms-class="current:status_model==$key">
+									{{$val}}
+								</li>
+	               			</ul>
+	               			<div class="clear"></div>
+	               		</div>
+	               		<ol>
+	               			<li><em>{{price_os[0]}}</em>&nbsp元/小时</li>
+	               			<li><span>{{price_os[1]}}</span>元/月</li>
+	               			<li><span>{{price_os[2]}}</span>元/年</li>
+	               		</ol>
+               		</div>
+               		<div class="tips" ms-controller="thread">
+               			<p>宽带套餐</p>
+	               		<div id="thread">
+	               			<span class="fl">线路:</span>
+	               			<ul>
+                                <li ms-repeat="data_thread" ms-click="change_status($index)" ms-class="current:status_thread==$index">
+                                    {{el}}
+                                </li>
+	               			</ul>
+	               			<div class="clear"></div>
+	               		</div>
+	               		<div id="bandwidth">
+	               			<span class="fl">带宽:</span>
+	               			<ul>
+                                <li ms-repeat="data_bandwidth" ms-click="change_status_bandwidth($index)" ms-class="current:status_bandwidth==$index">
+                                    {{el}}
+                                </li>
+	               			</ul>
+	               			<div class="clear"></div>
+	               		</div>
+	               		<ol>
+	               			<li><em>{{price_thread[0]}}</em>&nbsp元/小时</li>
+	               			<li><span>{{price_thread[1]}}</span>元/月</li>
+	               			<li><span>{{price_thread[2]}}</span>元/年</li>
+	               		</ol>
+               		</div>
+               		<div class="tips" style="border:none !important;" ms-controller="disk">
+               			<p>云硬盘</p>
+	               		<div id="disk">
+
+                            <span class="fl">数据盘:</span>
+                            <ul>
+                                <li>
+                                    <span class="slideControlContainer">
+                                        <span class="slideControlFill" ms-css-width="{{parseInt(num/10240*100)}}%">
+                                            <span class="slideControlHandle"></span>
+                                        </span>
+                                    </span>
+                                    <input type="text" class="slideControl slideControlInput" ms-duplex="num">
+                                    <strong>GB</strong>
+                                </li>
+                            </ul>
+	               		</div>
+	               		<ol style="margin-top:-18px;">
+	               			<li><em>{{price_disk[0] | number(2)}}</em>&nbsp元/小时</li>
+	               		</ol>
+                        <div class="clear"></div>
+               		</div>
+               		
+               		<div class="clear"></div>
+               		
+               </div>
+               <div class="cal_footer">
+               		<ul>
+               			<li>总价：<em>{{total_price_single()[0] | number(2)}}</em>元/小时</li>
+               			<li><span>{{total_price_single()[1] | number(2)}}</span>元/月</li>
+               			<li><span>{{total_price_single()[2] | number(2)}}</span>元/年</li>
+               			<li><a href="" id="buy" target="_blank">立即购买</a></li>
+               		</ul>
+
+               </div>
+            </div>
+
+			<div class="clear"></div>
+		</div>
+		
+	</div>
+
+	
+</body>
+</html>
