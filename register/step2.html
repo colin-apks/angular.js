@@ -1,0 +1,28 @@
+
+<div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-10">
+        <input type="email" class="form-control" id="inputEmail3" placeholder="Email" ng-model="formData.email" name="email" required>
+    </div>
+    <div ng-messages="myForm.email.$error">
+        <div class="alert alert-danger" ng-message="required">请输入邮箱</div>
+        <div class="alert alert-danger" ng-message="email">请输入正确的邮箱</div>
+    </div>
+</div>
+<div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">phone</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputPassword3" placeholder="phone number" ng-model="formData.phone" name="phone" ng-pattern="/^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/" required>
+    </div>
+    <div ng-messages="myForm.phone.$error">
+        <div class="alert alert-danger" ng-message="required">请输入手机号</div>
+        <div class="alert alert-danger" ng-message="pattern">请输入正确的邮箱</div>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+        <button type="button" class="btn btn-primary" ui-sref="index.step3" ng-disabled="myForm.$invalid">下一步</button>
+    </div>
+</div>
+

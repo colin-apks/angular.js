@@ -1,0 +1,7 @@
+.btn-group .btn{
+    border-radius:5px;
+    margin-right:10px;
+}
+.list-group-item .active{
+    background:#d43f3a;
+}
