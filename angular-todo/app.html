@@ -1,0 +1,29 @@
+
+<form  role="form" name="addData" novalidate>
+    <div class="row" >
+        <div class="alert alert-danger" ng-show="addData.inputdata.$error.pattern"><strong>输入错误:</strong>只能输入字母且必须大于三位</div>
+    </div>
+    <div class="input-group">
+        <input type="text" class="form-control" name="inputdata" ng-pattern="/^[a-zA-Z]{3,16}$/" ng-model="inputdata" placeholder="请输入您需要添加的信息" required>
+                    <span class="input-group-btn">
+                    <button type="button" class="btn btn-primary" ng-disabled="addData.$invalid" ng-click="addNewData()">增加</button>
+                </span>
+    </div>
+</form>
+
+<div class="row" style="margin-top: 50px;">
+    <div class="panel panel-success">
+        <div class="panel-heading">数据列表&nbsp&nbsp<span class="badge">{{totalLen}}</span></div>
+        <div class="panel-body" style="padding-top: 40px">
+            <ul class="col-md-8 col-md-offset-2">
+                <div class="row" style="margin-bottom:23px;" ng-repeat="val in data">
+                    <li class="col-md-8">{{val.name}}</li><div class="col-md-4" style="padding-left: 0px !important;"><button class="btn btn-success btn-sm btn-metro"  on-click="goEdit($index)" ui-sref="edit" >修改</button><button class="btn btn-danger btn-sm" ng-click="del($index)">删除</button></div>
+                </div>
+
+
+            </ul>
+        </div>
+        <div class="panel-footer"><button class="btn bg-primary col-md-offset-11"><span class="glyphicon glyphicon-arrow-right" ui-sref="search"></span></button></div>
+    </div>
+
+</div>
