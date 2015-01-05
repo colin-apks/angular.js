@@ -1,0 +1,7 @@
+<div class="row">
+    <div class="btn-group-vertical fl col-md-1" >
+        <button type="button" class="btn btn-primary" ng-repeat="v in data" ng-click="setUrl($index)">{{v}}</button>
+    </div>
+
+    <div ui-view class="fl col-md-8 col-md-off-2"></div>
+</div>
