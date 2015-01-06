@@ -11,10 +11,17 @@ angular.module('myCtr',['myService'])
     .controller("star",function($scope,starData){
         $scope.data=starData.data;
     })
-    .controller("news",function($scope,$state,$location){
+    .controller("news",function($scope,$state,$location,$rootScope){
         $scope.data= $state.current.data.role;
         var url=['/guonei','/guowai','/tiyu','/caijin','/yule','/meishi'];
         $scope.setUrl=function(i){
             $location.path('index/news'+url[i]);
+            $rootScope.$on('$locationChangeStart',function(){
+                console.log('开始改变$location')
+            });
+            $rootScope.$on('$locationChangeSuccess',function(){
+                console.log('结束改变$location')
+            });
         }
+
     })

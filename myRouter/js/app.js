@@ -4,6 +4,8 @@
 angular.module('myApp',['ui.router','myCtr','myService'])
     .config(function($stateProvider, $urlRouterProvider,$locationProvider) {
         $urlRouterProvider.otherwise('index');
+
+       // $locationProvider.html5Mode({enabled:true}).hashPrefix('!');
         $stateProvider
             .state('index', {
                 url: '/index',
@@ -34,10 +36,16 @@ angular.module('myApp',['ui.router','myCtr','myService'])
                 data:{
                     role:["国内","国外","体育","财经","娱乐",'美食']
                 },
-
                 controller:'news'
             })
-            .state("news.guonei",{
+            .state("newsList",{
+                parent:"news",
+                url:"/:name",
+                templateUrl: function($stateParams){
+                    return  $stateParams.name + '.html'
+                }
+            })
+           /* .state("news.guonei",{
                 url:"/guonei",
                 templateUrl:"newsCon.html"
             })
@@ -60,7 +68,7 @@ angular.module('myApp',['ui.router','myCtr','myService'])
             .state("news.meishi",{
                 url:"/meishi",
                 templateUrl:"newsCon.html"
-            })
+            })*/
 
 
     })
